@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tweakly update feed for Sparkle. Releases are added here by the release script. -->
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Tweakly</title>
+    <link>https://sajidshaik.github.io/tweakly/appcast.xml</link>
+    <description>Tweakly updates</description>
+    <language>en</language>
+  </channel>
+</rss>

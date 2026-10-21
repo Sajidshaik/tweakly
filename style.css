@@ -123,7 +123,7 @@ h1 .serif { letter-spacing: -0.02em; }
 .warn { color: var(--red); font-size: 12px; }
 .mini-switch { width: 34px; height: 20px; border-radius: 99px; background: var(--indigo); position: relative; flex: none; }
 .mini-switch::after { content: ""; position: absolute; top: 2px; left: 16px; width: 16px; height: 16px; border-radius: 50%; background: #fff; }
-@media (max-width: 1000px) { .frag { display: none; } .hero { padding-bottom: 70px; } }
+@media (max-width: 1240px) { .frag { display: none; } .hero { padding-bottom: 70px; } }
 
 /* ─── Sections ─── */
 section { padding: 90px 0; }

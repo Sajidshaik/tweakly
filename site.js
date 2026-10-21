@@ -24,7 +24,7 @@ if (demo) {
 
   const render = () => {
     const on = toggles.filter((t) => t.getAttribute("aria-checked") === "true").length;
-    status.textContent = `Free · ${on} of ${FREE_LIMIT} tweaks on`;
+    status.textContent = `${on} of ${FREE_LIMIT} · Free`;
   };
 
   toggles.forEach((t) =>

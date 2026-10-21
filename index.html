@@ -3,19 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tweakly — The little Mac fixes Apple never made</title>
-  <meta name="description" content="Tweakly is a tiny menu bar app for macOS that fixes everyday annoyances: Enter opens files, real cut and paste in Finder, Esc closes dialogs, and more. Free to try, Pro is $12 once.">
-  <meta property="og:title" content="Tweakly — The little Mac fixes Apple never made">
-  <meta property="og:description" content="Nine small fixes for Finder and the keyboard, in one lightweight menu bar app.">
+  <title>Tweakly — The tiny fixes your Mac forgot</title>
+  <meta name="description" content="Tweakly is a featherweight menu bar app for macOS that fixes nine everyday annoyances: Enter opens files, real cut and paste in Finder, Esc closes dialogs, and more. Free to try, Pro is $12 once.">
+  <meta property="og:title" content="Tweakly — The tiny fixes your Mac forgot">
+  <meta property="og:description" content="Nine small fixes for Finder and the keyboard, in one featherweight menu bar app.">
   <meta property="og:image" content="icon-512.png">
   <link rel="icon" href="favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="aurora" aria-hidden="true"></div>
 
-<!-- Icon sprite (stroke icons) -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="i-return" viewBox="0 0 24 24"><path d="M9 10 4 15l5 5"/><path d="M20 4v7a4 4 0 0 1-4 4H4"/></symbol>
@@ -27,13 +29,10 @@
     <symbol id="i-full" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></symbol>
     <symbol id="i-eyeoff" viewBox="0 0 24 24"><path d="M9.9 4.24A9.1 9.1 0 0 1 12 4c7 0 10 8 10 8a13.2 13.2 0 0 1-1.67 2.68M6.61 6.61A13.5 13.5 0 0 0 2 12s3 8 10 8a9.7 9.7 0 0 0 5.39-1.61M14.12 14.12a3 3 0 1 1-4.24-4.24M2 2l20 20"/></symbol>
     <symbol id="i-drive" viewBox="0 0 24 24"><path d="M22 12H2M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11"/><path d="M6 16h.01M10 16h.01"/></symbol>
-    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
-    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
-    <symbol id="i-toggle" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="5"/><circle cx="16" cy="12" r="3"/></symbol>
     <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0 5-5m-5 5-5-5M4 21h16"/></symbol>
   </defs>
 </svg>
-<style>svg use { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }</style>
+<style>svg use { fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }</style>
 
 <div class="wrap">
   <header class="nav">
@@ -49,127 +48,120 @@
   <main id="top">
     <!-- ─── Hero ─── -->
     <section class="hero">
-      <div>
-        <img class="hero-icon" src="icon-512.png" alt="Tweakly app icon: a glass bandage with a Command key">
-        <span class="eyebrow">For macOS 14 and later</span>
-        <h1>The little Mac fixes <span class="hl">Apple never made.</span></h1>
-        <p class="lede">Tweakly lives in your menu bar and patches the everyday annoyances in Finder and the keyboard. Enter opens files. ⌘X actually cuts. Esc closes dialogs. Flip a switch, done.</p>
-        <div class="cta">
-          <a class="btn btn-primary" data-download href="#download"><svg><use href="#i-download"/></svg>Download free</a>
-          <a class="btn btn-glass" data-checkout href="#pricing">Get Pro — $12</a>
-        </div>
-        <p class="fine">Free with any 3 tweaks · Pro unlocks all, one-time payment · Apple silicon &amp; Intel</p>
+      <img class="hero-icon" src="icon-512.png" alt="Tweakly app icon">
+      <h1>The tiny fixes your Mac <span class="serif">forgot.</span></h1>
+      <p class="lede">A featherweight menu bar app that patches nine everyday macOS annoyances in Finder and the keyboard. Flip a switch, never think about it again.</p>
+      <div class="cta">
+        <a class="btn btn-primary" data-download href="#download"><svg><use href="#i-download"/></svg>Download free</a>
+        <a class="btn btn-glass" data-checkout href="#pricing">Get Pro — $12</a>
       </div>
+      <p class="fine">macOS 14 or later · Free with any 3 tweaks · Pro is a one-time $12</p>
 
-      <!-- Interactive mirror of the real popover -->
-      <div class="demo-stage">
-        <div class="menubar" aria-hidden="true">
-          <span>Wed 9:41</span>
-          <svg class="mb-icon" viewBox="0 0 20 20"><g transform="rotate(-38 10 10)"><rect x="1" y="5.8" width="18" height="8.4" rx="4.2" fill="none" stroke="currentColor" stroke-width="1.35"/><rect x="7.6" y="7.6" width="4.8" height="4.8" rx="1.2" fill="currentColor"/><circle cx="4.3" cy="10" r="0.8" fill="currentColor"/><circle cx="15.7" cy="10" r="0.8" fill="currentColor"/></g></svg>
-        </div>
-        <div class="popover" data-demo aria-label="Interactive preview of Tweakly's menu">
-          <div class="pop-head">
-            <img src="icon-512.png" alt="">
-            <div><strong>Tweakly</strong><small data-status>Free · 2 of 3 tweaks on</small></div>
+      <div class="frag bare" style="left:3%;top:150px;rotate:-6deg"><span class="key">⌘</span><span class="key">X</span></div>
+      <div class="frag" style="left:6%;top:380px;rotate:4deg">↩ Enter opens files <span class="mini-switch"></span></div>
+      <div class="frag" style="left:1%;top:560px;rotate:-3deg"><span class="field">my<b>:</b>file.txt</span><span class="warn">“:” can’t be used</span></div>
+      <div class="frag bare" style="right:6%;top:130px;rotate:6deg"><span class="key">esc</span></div>
+      <div class="frag" style="right:2%;top:350px;rotate:-4deg">💿 Disk image ejected · <span style="color:var(--indigo)">Move .dmg to Trash</span></div>
+      <div class="frag" style="right:7%;top:540px;rotate:3deg"><s style="color:var(--faint)">.DS_Store</s> ✕ 47 removed</div>
+    </section>
+
+    <!-- ─── Popover showcase ─── -->
+    <section>
+      <div class="showcase">
+        <div>
+          <span class="kicker">How it works</span>
+          <div class="section-head" style="text-align:left;margin:0 0 34px">
+            <h2>One menu. Nine <span class="serif">little</span> switches.</h2>
+            <p>Tweakly sits quietly in your menu bar. Turn on what bugs you, leave the rest alone.</p>
           </div>
-          <div class="pop-body">
-            <div class="notice" data-notice hidden>
-              <span aria-hidden="true">✨</span>
-              <div><b>Free plan: 3 tweaks at a time</b><span>Turn one off to swap, or get Pro to use all 9 together.</span></div>
-            </div>
+          <div class="points">
+            <div class="point"><span class="num">1</span><div><h3>Flip a switch</h3><p>Each fix is independent. It works the moment you turn it on.</p></div></div>
+            <div class="point"><span class="num">2</span><div><h3>Forget about it</h3><p>Tweakly sleeps until a tweak is needed. No lag, no fans, no battery drain.</p></div></div>
+            <div class="point"><span class="num">3</span><div><h3>Undo anytime</h3><p>Turn it off and macOS is exactly as it was. Hold ⌥ at launch for safe mode.</p></div></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="popover" data-demo aria-label="Interactive preview of Tweakly's menu">
+            <div class="pop-head"><img src="icon-512.png" alt=""><strong>Tweakly</strong><span class="badge" data-status>2 of 3 · Free</span></div>
+            <div class="notice" data-notice hidden><b>Free plan: 3 tweaks at a time</b><span>Turn one off to swap, or get Pro for all 9.</span></div>
             <div class="pop-section">FINDER</div>
-            <div class="pop-card">
-              <div class="row">
-                <div class="tile blue"><svg><use href="#i-return"/></svg></div>
-                <div class="row-text"><b>Enter opens files</b><span>Return opens. ⌘Return renames.</span><div class="hint">Return renames → <em>Return opens</em></div></div>
-                <button class="switch" role="switch" aria-checked="true" aria-label="Enter opens files" data-toggle></button>
-              </div>
-              <div class="row">
-                <div class="tile blue"><svg><use href="#i-scissors"/></svg></div>
-                <div class="row-text"><b>Cut and paste files</b><span>⌘X then ⌘V moves files.</span><div class="hint">⌘X does nothing → <em>⌘X, ⌘V moves</em></div></div>
-                <button class="switch" role="switch" aria-checked="true" aria-label="Cut and paste files" data-toggle></button>
-              </div>
-              <div class="row">
-                <div class="tile blue"><svg><use href="#i-window"/></svg></div>
-                <div class="row-text"><b>Remember window size</b><span>New windows open where you left them.</span><div class="hint">Random spot → <em>Where you left it</em></div></div>
-                <button class="switch" role="switch" aria-checked="false" aria-label="Remember window size" data-toggle></button>
-              </div>
-            </div>
+            <div class="row"><span class="glyph blue"><svg><use href="#i-return"/></svg></span>Enter opens files<button class="switch" role="switch" aria-checked="true" aria-label="Enter opens files" data-toggle></button></div>
+            <div class="row"><span class="glyph blue"><svg><use href="#i-scissors"/></svg></span>Cut and paste files<button class="switch" role="switch" aria-checked="true" aria-label="Cut and paste files" data-toggle></button></div>
+            <div class="row"><span class="glyph blue"><svg><use href="#i-window"/></svg></span>Remember window size<button class="switch" role="switch" aria-checked="false" aria-label="Remember window size" data-toggle></button></div>
+            <div class="row"><span class="glyph blue"><svg><use href="#i-command"/></svg></span>⌘Tab opens a window<button class="switch" role="switch" aria-checked="false" aria-label="Command-Tab opens a window" data-toggle></button></div>
             <div class="pop-section">KEYBOARD</div>
-            <div class="pop-card">
-              <div class="row">
-                <div class="tile violet"><svg><use href="#i-esc"/></svg></div>
-                <div class="row-text"><b>Esc closes dialogs</b><span>Esc cancels sheets that ignore it.</span><div class="hint">Esc ignored → <em>Esc cancels</em></div></div>
-                <button class="switch" role="switch" aria-checked="false" aria-label="Esc closes dialogs" data-toggle></button>
-              </div>
-            </div>
+            <div class="row"><span class="glyph violet"><svg><use href="#i-esc"/></svg></span>Esc closes dialogs<button class="switch" role="switch" aria-checked="false" aria-label="Esc closes dialogs" data-toggle></button></div>
+            <div class="row"><span class="glyph violet"><svg><use href="#i-full"/></svg></span>Esc stays in full screen<button class="switch" role="switch" aria-checked="false" aria-label="Esc stays in full screen" data-toggle></button></div>
+            <div class="pop-foot">Unlock all 9 with Pro…</div>
           </div>
+          <p class="demo-caption">Go on, flip a few.</p>
         </div>
-        <p class="demo-caption">Try it — flip the switches.</p>
       </div>
     </section>
 
     <!-- ─── Tweaks ─── -->
     <section id="tweaks">
       <div class="section-head">
-        <h2>Nine fixes. One tiny app.</h2>
-        <p>Each tweak is a switch. Turn on what bugs you, leave the rest alone.</p>
+        <span class="kicker">The tweaks</span>
+        <h2>Small annoyances, <span class="serif">fixed.</span></h2>
+        <p>Nine things macOS gets slightly wrong, and what Tweakly does instead.</p>
       </div>
       <div class="grid">
-        <article class="card">
-          <div class="tile blue"><svg><use href="#i-return"/></svg></div>
+        <article class="card tweak">
+          <div class="visual v-sky"><span class="key">↩</span><span style="color:var(--muted)">→</span><span class="chipcard">📄 Opens report.pdf</span></div>
           <h3>Enter opens files</h3>
-          <p>Press Return to open the selection, like every other computer. ⌘Return or F2 renames.</p>
-          <span class="chip"><s>Return renames</s> → <i>Return opens</i></span>
+          <p>Return opens the selection, like every other computer. ⌘Return or F2 renames.</p>
+          <div class="ba"><s>Return renames</s><span class="serif">Return opens</span></div>
         </article>
-        <article class="card">
-          <div class="tile blue"><svg><use href="#i-scissors"/></svg></div>
+        <article class="card tweak">
+          <div class="visual v-lilac"><span class="key">⌘</span><span class="key">X</span><span style="color:var(--muted)">then</span><span class="key">⌘</span><span class="key">V</span></div>
           <h3>Cut and paste files</h3>
           <p>⌘X then ⌘V moves files in Finder. A little pill confirms what you cut.</p>
-          <span class="chip"><s>⌘X does nothing</s> → <i>⌘X, ⌘V moves</i></span>
+          <div class="ba"><s>⌘X does nothing</s><span class="serif">⌘X moves</span></div>
         </article>
-        <article class="card">
-          <div class="tile blue"><svg><use href="#i-window"/></svg></div>
+        <article class="card tweak">
+          <div class="visual v-mint"><span class="chipcard">🪟 Right where you left it</span></div>
           <h3>Remember window size</h3>
           <p>New Finder windows open at the size and spot of the last one you moved.</p>
-          <span class="chip"><s>Random size and spot</s> → <i>Where you left it</i></span>
+          <div class="ba"><s>Random size and spot</s><span class="serif">Where you left it</span></div>
         </article>
-        <article class="card">
-          <div class="tile blue"><svg><use href="#i-command"/></svg></div>
+        <article class="card tweak">
+          <div class="visual v-peach"><span class="key">⌘</span><span class="key">⇥</span><span style="color:var(--muted)">→</span><span class="chipcard">📁 Finder window</span></div>
           <h3>⌘Tab opens a window</h3>
           <p>Switch to Finder with ⌘Tab and get a window, even when none was open.</p>
-          <span class="chip"><s>Nothing appears</s> → <i>A window opens</i></span>
+          <div class="ba"><s>Nothing appears</s><span class="serif">A window opens</span></div>
         </article>
-        <article class="card">
-          <div class="tile blue"><svg><use href="#i-rename"/></svg></div>
+        <article class="card tweak">
+          <div class="visual v-sky"><span class="chipcard"><span class="field">my<b>:</b>file.txt</span></span></div>
           <h3>Keep rename on errors</h3>
           <p>Typed a character that isn't allowed? You stay in the name field with your text intact.</p>
-          <span class="chip"><s>Rename cancelled</s> → <i>Fix and retry</i></span>
+          <div class="ba"><s>Rename cancelled</s><span class="serif">Fix and retry</span></div>
         </article>
-        <article class="card">
-          <div class="tile violet"><svg><use href="#i-esc"/></svg></div>
+        <article class="card tweak">
+          <div class="visual v-lilac"><span class="key">esc</span><span style="color:var(--muted)">→</span><span class="chipcard">✕ Cancel</span></div>
           <h3>Esc closes dialogs</h3>
-          <p>Esc cancels dialogs and sheets that ignore it — and never presses Don't Save or Delete.</p>
-          <span class="chip"><s>Esc ignored</s> → <i>Esc cancels</i></span>
+          <p>Esc cancels dialogs that ignore it — and never presses Don't Save or Delete.</p>
+          <div class="ba"><s>Esc ignored</s><span class="serif">Esc cancels</span></div>
         </article>
-        <article class="card">
-          <div class="tile violet"><svg><use href="#i-full"/></svg></div>
-          <span class="tag">Safari soon</span>
+        <article class="card tweak">
+          <span class="soon">Safari soon</span>
+          <div class="visual v-mint"><span class="key" style="min-width:90px">hold esc</span></div>
           <h3>Esc stays in full screen</h3>
-          <p>In the apps you pick, a stray Esc won't kick you out of full screen. Hold Esc to leave.</p>
-          <span class="chip"><s>Tap Esc exits</s> → <i>Hold Esc exits</i></span>
+          <p>In apps you pick, a stray Esc won't throw you out of full screen. Hold it to leave.</p>
+          <div class="ba"><s>Tap Esc exits</s><span class="serif">Hold Esc exits</span></div>
         </article>
-        <article class="card">
-          <div class="tile green"><svg><use href="#i-eyeoff"/></svg></div>
+        <article class="card tweak">
+          <div class="visual v-peach"><span class="chipcard"><s style="color:var(--faint)">.DS_Store</s> ✕ 47 removed</span></div>
           <h3>No .DS_Store on other drives</h3>
           <p>Finder stops littering USB sticks and network shares. Clean any folder in one click.</p>
-          <span class="chip"><s>Hidden clutter</s> → <i>Clean drives</i></span>
+          <div class="ba"><s>Hidden clutter</s><span class="serif">Clean drives</span></div>
         </article>
-        <article class="card">
-          <div class="tile orange"><svg><use href="#i-drive"/></svg></div>
+        <article class="card tweak">
+          <div class="visual v-sky"><span class="chipcard">💿 Ejected · <span style="color:var(--indigo)">Trash .dmg?</span></span></div>
           <h3>Clean up after installing</h3>
-          <p>Drag an app to Applications and Tweakly ejects the disk image and offers to bin the .dmg.</p>
-          <span class="chip"><s>Leftover disk + .dmg</s> → <i>Tidied away</i></span>
+          <p>Drag an app to Applications and Tweakly ejects the disk image, then offers to bin the .dmg.</p>
+          <div class="ba"><s>Leftover disk + .dmg</s><span class="serif">Tidied away</span></div>
         </article>
       </div>
     </section>
@@ -177,36 +169,28 @@
     <!-- ─── Trust ─── -->
     <section>
       <div class="section-head">
-        <h2>Light, private, reversible.</h2>
-        <p>Built like a good Mac app should be.</p>
+        <span class="kicker">Built right</span>
+        <h2>Light, private, <span class="serif">reversible.</span></h2>
       </div>
       <div class="trust">
-        <div class="card">
-          <div class="tile violet"><svg><use href="#i-lock"/></svg></div>
-          <div><h3>Nothing leaves your Mac</h3><p>No accounts, no analytics. Keys you type are never stored or sent anywhere.</p></div>
-        </div>
-        <div class="card">
-          <div class="tile blue"><svg><use href="#i-bolt"/></svg></div>
-          <div><h3>Barely there</h3><p>Sleeps until it's needed. No lag in Finder, no fan noise, no battery drain.</p></div>
-        </div>
-        <div class="card">
-          <div class="tile green"><svg><use href="#i-toggle"/></svg></div>
-          <div><h3>Undo with one switch</h3><p>Turn a tweak off and macOS behaves exactly as before. Hold ⌥ at launch for safe mode.</p></div>
-        </div>
+        <div class="card"><div class="big">0</div><h3>bytes of your data</h3><p>No accounts, no analytics. What you type is never stored or sent anywhere.</p></div>
+        <div class="card"><div class="big">~0%</div><h3>CPU while idle</h3><p>Tweakly sleeps until it's needed. Only the tweaks you switch on run at all.</p></div>
+        <div class="card"><div class="big">1</div><h3>switch to undo</h3><p>Turn a tweak off and macOS behaves exactly as before. Nothing permanent.</p></div>
       </div>
     </section>
 
     <!-- ─── Pricing ─── -->
     <section id="pricing">
       <div class="section-head">
-        <h2>Simple pricing.</h2>
-        <p>Try every tweak for free. Pay once if you want them all at the same time.</p>
+        <span class="kicker">Pricing</span>
+        <h2>Pay once. <span class="serif">Keep it.</span></h2>
+        <p>Try every tweak for free. Upgrade if you want them all at the same time.</p>
       </div>
       <div class="plans">
         <div class="card plan">
           <h3>Free</h3>
           <div class="price">$0</div>
-          <p style="color:var(--muted);margin:0">Forever.</p>
+          <p class="sub">Forever.</p>
           <ul>
             <li>Any 3 tweaks on at once</li>
             <li>Swap tweaks anytime</li>
@@ -215,10 +199,10 @@
           <a class="btn btn-glass" data-download href="#download">Download free</a>
         </div>
         <div class="card plan pro">
-          <span class="badge">Best value</span>
+          <span class="ribbon">Best value</span>
           <h3>Pro</h3>
           <div class="price">$12 <small>one time</small></div>
-          <p style="color:var(--muted);margin:0">No subscription. Yours to keep.</p>
+          <p class="sub">No subscription. Yours to keep.</p>
           <ul>
             <li>All 9 tweaks on at once</li>
             <li>Every new tweak we add</li>
@@ -233,7 +217,7 @@
 
     <!-- ─── FAQ ─── -->
     <section id="faq">
-      <div class="section-head"><h2>Questions</h2></div>
+      <div class="section-head"><span class="kicker">FAQ</span><h2>Good <span class="serif">questions.</span></h2></div>
       <div class="faq">
         <details class="card"><summary>Why does Tweakly ask for Accessibility permission?</summary>
           <p>To notice shortcuts like Return or ⌘X in Finder and to move or close windows. It's the same permission window managers and keyboard tools use. Tweakly only reacts to the few keys its tweaks need, and only in the apps they're for.</p></details>
@@ -258,10 +242,10 @@
     <section id="download">
       <div class="final">
         <img src="icon-512.png" alt="">
-        <h2>Patch your Mac in a minute.</h2>
+        <h2>Give your Mac its <span class="serif">missing bits.</span></h2>
         <p>Free to download. macOS 14 or later.</p>
-        <div class="cta" style="justify-content:center">
-          <a class="btn btn-white" data-download href="#download"><svg><use href="#i-download"/></svg>Download Tweakly</a>
+        <div class="cta">
+          <a class="btn btn-primary" data-download href="#download"><svg><use href="#i-download"/></svg>Download Tweakly</a>
           <a class="btn btn-glass" data-checkout href="#pricing">Get Pro — $12</a>
         </div>
       </div>

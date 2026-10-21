@@ -1,7 +1,7 @@
 // ─── Edit these three lines, then upload. Everything else reads from here. ───
 const SITE = {
   email: "YOUR-EMAIL@example.com",
-  checkoutURL: "#pricing", // your Lemon Squeezy checkout link
+  checkoutURL: "https://sajid.lemonsqueezy.com/checkout/buy/bc0ef20d-5919-4b74-b2eb-ecb093f07c1f",
   downloadURL: "#download", // e.g. https://github.com/USERNAME/tweakly/releases/latest/download/Tweakly.dmg
 };
 // ─────────────────────────────────────────────────────────────────────────────
